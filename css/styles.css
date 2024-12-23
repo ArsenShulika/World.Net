@@ -1,3 +1,35 @@
+body {
+    font-family: "Inter", serif;
+}
+
+button {
+    cursor: pointer;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+    margin-bottom: 0;
+    margin-top: 0;
+}
+
+ul,
+ol {
+    margin-top: 0;
+    margin-bottom: 0;
+    padding-left: 0;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
 .link {
     text-decoration: none;
 }
@@ -6,12 +38,44 @@
     list-style-type: none;
 }
 
-body {
-    font-family: "Inter", serif;
+.title {
+    font-family: "Inter", sans-serif;
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 1.33;
+    text-align: center;
+    color: #000;
 }
 
-button {
-    cursor: pointer;
+.container {
+    padding-left: 132px;
+    padding-right: 132px;
+    width: 1440px;
+
+}
+
+
+.section {
+    padding-top: 175px;
+    padding-bottom: 175px;
+}
+
+.accent-color {
+    color: #2C7250;
+}
+
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+
+    white-space: nowrap;
+    clip-path: inset(100%);
+    clip: rect(0 0 0 0);
+    overflow: hidden;
 }
 
 /* HEADER */
@@ -23,13 +87,36 @@ button {
     line-height: 1.5;
     text-transform: uppercase;
     color: #2c7250;
+    padding-top: 40px;
+    padding-bottom: 40px;
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.main-nav {
+    display: flex;
+    width: 815px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.menu {
+    display: flex;
+    gap: 40px;
 }
 
 .menu-link {
+    display: block;
     font-weight: 500;
     font-size: 18px;
     line-height: 1.5;
     color: #2e363e;
+    padding-top: 56px;
+    padding-bottom: 56px;
 }
 
 .menu-link:hover,
@@ -44,9 +131,30 @@ button {
     line-height: 1.52;
     text-align: right;
     color: #2c7250;
+    padding-top: 47px;
+    padding-bottom: 47px;
 }
 
+
+
 /****************** HERO */
+
+.hero {
+    padding-top: 80px;
+    padding-bottom: 80px;
+}
+
+.hero-contaier {
+    display: flex;
+    gap: 12px;
+    align-items: center;
+}
+
+.hero-text-container {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
 
 .hero-title {
     font-weight: 700;
@@ -62,6 +170,7 @@ button {
     line-height: 1.6;
     letter-spacing: -0.01em;
     color: #434b53;
+    width: 434px;
 }
 
 .hero-btn {
@@ -73,19 +182,32 @@ button {
     color: #fff;
     border-radius: 5px;
     padding: 20px 50px;
-    height: 70px;
     background: #2c7250;
     border: transparent;
+    width: 337px;
 }
 
 /******** BENEFITS  */
 
+.benefits {
+    background-color: #FAFAFA;
+}
+
+
+
 .benefits-title {
-    font-weight: 700;
-    font-size: 36px;
-    line-height: 1.33;
-    text-align: center;
-    color: #000;
+    margin-bottom: 60px;
+}
+
+.benefits-list {
+    display: flex;
+    gap: 53px;
+    justify-content: center;
+}
+
+.benefits-img {
+    margin: 0 auto;
+    margin-bottom: 11px;
 }
 
 .benefits-subtitle {
@@ -95,6 +217,7 @@ button {
     line-height: 1.43;
     text-align: center;
     color: #000;
+    margin-bottom: 4px;
 }
 
 .benefits-text {
@@ -106,6 +229,18 @@ button {
 }
 
 /*************** ABOUT  */
+.about-contaier {
+    display: flex;
+    gap: 12px;
+    align-items: center;
+    gap: 94px;
+}
+
+.text-wrapper {
+    display: flex;
+    flex-direction: column;
+
+}
 
 .about-title {
     font-weight: 700;
@@ -113,6 +248,8 @@ button {
     line-height: 1.3;
     letter-spacing: -0.03em;
     color: #2e363e;
+    margin-bottom: 20px;
+    width: 376px;
 }
 
 .about-text {
@@ -121,13 +258,28 @@ button {
     line-height: 1.43;
     letter-spacing: -0.01em;
     color: #434b53;
+    margin-bottom: 28px;
 }
 
-.about-item-text {
+.about-list {
+    display: flex;
+    gap: 30px;
+}
+
+.about-item-text-one {
     font-weight: 400;
     font-size: 14px;
     line-height: 1.5;
     color: #2e363e;
+    width: 145px;
+}
+
+.about-item-text-two {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 1.5;
+    color: #2e363e;
+    width: 167px;
 }
 
 .about span {
@@ -139,6 +291,10 @@ button {
 
 /*********REVIEWS  */
 
+.reviews {
+    background-color: #FAFAFA;
+}
+
 .reviews-text {
     font-weight: 700;
     font-size: 16px;
@@ -146,6 +302,7 @@ button {
     letter-spacing: 0.03em;
     text-align: justify;
     color: #000;
+    margin-bottom: 19px;
 }
 
 .reviews-text span {
@@ -157,11 +314,38 @@ button {
     font-size: 36px;
     line-height: 1.255;
     letter-spacing: 0.03em;
+    text-align: start;
     color: #000;
+    width: 378px;
+    margin-bottom: 102px;
+}
+
+.reviews-list {
+    display: flex;
+    flex-direction: row;
+    gap: 35px;
+
 }
 
 .reviews-title span {
     color: #2c7250;
+}
+
+.reviews-item {
+    position: relative;
+    background-color: #FFFFFF;
+    border-radius: 5px;
+    width: calc((100% - 70px) / 3);
+    height: 198px;
+
+}
+
+.reviews-wrapper-img {
+    border-radius: 100%;
+    background-color: #2c7250;
+    position: absolute;
+    left: 133px;
+    top: -41px;
 }
 
 .reviews-subtitle {
@@ -170,6 +354,8 @@ button {
     letter-spacing: 0.03em;
     text-align: center;
     color: #000;
+    margin-top: 69px;
+    margin-bottom: 19px;
 }
 
 .reviews-desc {
@@ -178,10 +364,39 @@ button {
     line-height: 1.55;
     letter-spacing: 0.03em;
     text-align: center;
+
+    width: 329px;
     color: #696969;
+    margin: 0 auto;
 }
 
 /****** TARRIFS  */
+
+.tarrifs-list {
+    display: flex;
+    gap: 19px;
+}
+
+.tarrifs-list-item {
+    width: calc((100% - 40px) / 3);
+}
+
+.tarrifs-img {
+    margin: 0 auto 47px;
+}
+
+.tarrifs-wrapper {
+    display: flex;
+    justify-content: space-between;
+}
+
+.wrapper-tarrifs-desc {
+    display: flex;
+    flex-direction: column;
+    row-gap: 13px;
+    width: 307px;
+    margin: 0 auto 52px;
+}
 
 .tarrifs-subtitle {
     font-weight: 700;
@@ -211,6 +426,7 @@ button {
 }
 
 .tarrifs-btn {
+    display: block;
     font-family: "Inter", sans-serif;
     font-weight: 400;
     font-size: 17px;
@@ -219,6 +435,7 @@ button {
     border: transparent;
     background-color: transparent;
     text-decoration: underline;
+    margin-left: auto;
 }
 
 /*************** CONTACTS  */
