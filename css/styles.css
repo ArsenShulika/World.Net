@@ -637,16 +637,6 @@ img {
     height: 100%;
     z-index: 999999;
     background-color: rgb(0, 0, 0, 0.56);
-
-    opacity: 0;
-    visibility: hidden;
-    pointer-events: none;
-}
-
-.backdrop.is-open {
-    opacity: 1;
-    visibility: visible;
-    pointer-events: auto;
 }
 
 /************** BACKDROP  *************/
@@ -664,6 +654,17 @@ img {
     padding: 75px 50px 75px;
 }
 
+.modal-form-close-btn {
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    border-radius: 50%;
+    background-color: #006333;
+    border: none;
+    cursor: pointer;
+}
 
 .modal-title {
     display: flex;
@@ -775,6 +776,16 @@ img {
 .form-send-btn:hover,
 .form-send-btn:focus {
     background-color: #006333;
+}
+
+.is-hidden {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+}
+
+.no-scroll {
+    overflow: hidden;
 }
 
 /************** MODAL WINDOW SYTLE  *************/

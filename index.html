@@ -55,7 +55,7 @@
               We work only in small towns. Thanks to this, we maintain quality
               and we will not spray
             </p>
-            <button class="hero-btn" type="button">
+            <button class="hero-btn" data-modal-open type="button">
               Submit your application
             </button>
           </div>
@@ -370,8 +370,13 @@
     </footer>
     <!-------------- FOOTER  --------------->
     <!------------------ BACKDROP ---------------->
-    <div class="backdrop">
+    <div class="backdrop is-hidden" data-modal>
       <div class="modal">
+        <button
+          class="modal-form-close-btn"
+          data-modal-close
+          type="button"
+        ></button>
         <p class="modal-title">Contact Us</p>
         <p class="modal-subtitle">
           Contact
@@ -415,6 +420,7 @@
         </form>
       </div>
     </div>
+    <script src="./js/modal.js"></script>
     <!------------------ BACKDROP ---------------->
   </body>
 </html>
