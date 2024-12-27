@@ -160,7 +160,14 @@
           <ul class="reviews-list list">
             <li class="reviews-item">
               <div class="reviews-wrapper-img">
-                <img src="" alt="" width="97" height="97" />
+                <svg
+                  class="review-user-icon"
+                  width="48"
+                  height="48"
+                  aria-label="user icon star"
+                >
+                  <use href="./icons/sprite.svg#icon-user-star"></use>
+                </svg>
               </div>
               <h3 class="reviews-subtitle">Name Here</h3>
               <p class="reviews-desc">
@@ -171,7 +178,14 @@
             </li>
             <li class="reviews-item">
               <div class="reviews-wrapper-img">
-                <img src="" alt="" width="97" height="97" />
+                <svg
+                  class="review-user-icon"
+                  width="48"
+                  height="48"
+                  aria-label="user icon star"
+                >
+                  <use href="./icons/sprite.svg#icon-user-star"></use>
+                </svg>
               </div>
               <h3 class="reviews-subtitle">Name Here</h3>
               <p class="reviews-desc">
@@ -182,7 +196,14 @@
             </li>
             <li class="reviews-item">
               <div class="reviews-wrapper-img">
-                <img src="" alt="" width="97" height="97" />
+                <svg
+                  class="review-user-icon"
+                  width="48"
+                  height="48"
+                  aria-label="user icon star"
+                >
+                  <use href="./icons/sprite.svg#icon-user-star"></use>
+                </svg>
               </div>
               <h3 class="reviews-subtitle">Name Here</h3>
               <p class="reviews-desc">
@@ -266,11 +287,56 @@
             You will have the opportunity to discuss details and ask clarifying
             questions
           </p>
-          <button class="contacts-btn" type="button">Order calculation</button>
-          <p class="contacts-checkbox-text">
-            By clicking on the button, you agree to the
-            <a href=""><span>terms of processing personal data</span></a>
-          </p>
+          <form class="form">
+            <div class="input-button-wrapper">
+              <input
+                class="form-input"
+                name="user-phone"
+                type="tel"
+                placeholder="Phone number"
+                pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
+                title="xxx-xxx-xxxx"
+                required
+              /><input
+                class="form-input"
+                name="user-name"
+                type="text"
+                placeholder="Name"
+                pattern="[A-Za-z]{2,}"
+                title="Arsen"
+                required
+              />
+              <button class="contacts-btn" type="submit">
+                Order calculation
+              </button>
+            </div>
+
+            <div class="checkbox-wrapper">
+              <input
+                class="policy-original-checkbox visually-hidden"
+                type="checkbox"
+                id="policy-checkbox"
+                value="true"
+                name="policy-checkbox"
+                required
+              />
+              <label class="policy-checkbox-label" for="policy-checkbox"
+                ><span class="policy-own-custom-checkbox"
+                  ><svg
+                    class="policy-own-checkbox-icon"
+                    width="7"
+                    height="8"
+                    aria-label="checkmark icon"
+                  >
+                    <use href="icons/sprite.svg#icon-check"></use></svg
+                ></span>
+                By clicking on the button, you agree to the
+                <a class="accent-color" href="#">
+                  terms of processing personal data</a
+                >
+              </label>
+            </div>
+          </form>
         </div>
       </section>
     </main>
@@ -302,5 +368,53 @@
         </address>
       </div>
     </footer>
+    <!-------------- FOOTER  --------------->
+    <!------------------ BACKDROP ---------------->
+    <div class="backdrop">
+      <div class="modal">
+        <p class="modal-title">Contact Us</p>
+        <p class="modal-subtitle">
+          Contact
+          <span class="accent-color-backdrop">Us & We Can Work Together</span>
+        </p>
+        <p class="modal-text">
+          Lorem ipsum dolor sit amet consectetur. Adipiscing nisl id at arcu
+          enim id gravida pulvinar. Tristique consectetur mi curabitur congue
+          enim dignissim
+        </p>
+        <form class="form">
+          <label class="modal-form-label" for="user-name"
+            ><input
+              class="modal-form-input"
+              type="text"
+              id="user-name"
+              name="user-name"
+              placeholder="Your Name"
+              pattern="[A-Za-z]{2,}"
+              title="Arsen"
+              required
+          /></label>
+          <label class="modal-form-label" for="user-email"
+            ><input
+              class="modal-form-input"
+              type="email"
+              id="user-email"
+              name="user-email"
+              placeholder="Your Email"
+              required
+          /></label>
+          <label for="user-message">
+            <textarea
+              class="form-textarea-comment"
+              name="user-message"
+              id="user-message"
+              placeholder="Your Message"
+            ></textarea>
+          </label>
+          <button class="form-send-btn" type="submit">Submit Message</button>
+        </form>
+      </div>
+    </div>
+    <!------------------ BACKDROP ---------------->
   </body>
 </html>

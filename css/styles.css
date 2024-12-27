@@ -48,6 +48,7 @@ img {
 }
 
 .container {
+    position: relative;
     padding-left: 16px;
     padding-right: 16px;
     max-width: 1200px;
@@ -62,6 +63,10 @@ img {
 
 .accent-color {
     color: #2C7250;
+}
+
+.accent-color-backdrop {
+    color: #006333;
 }
 
 .visually-hidden {
@@ -298,7 +303,18 @@ img {
     background-color: #FAFAFA;
 }
 
+.reviews-text::before {
+    display: block;
+    content: '';
+    border: 2px solid #2c7250;
+    width: 143px;
+    height: 0px;
+    margin-right: 19px;
+}
+
 .reviews-text {
+    display: flex;
+    align-items: center;
     font-weight: 700;
     font-size: 16px;
     line-height: 1.55;
@@ -306,13 +322,16 @@ img {
     text-align: justify;
     color: #000;
     margin-bottom: 19px;
+
 }
+
 
 .reviews-text span {
     color: #2c7250;
 }
 
 .reviews-title {
+    position: relative;
     font-weight: 700;
     font-size: 36px;
     line-height: 1.255;
@@ -344,7 +363,12 @@ img {
 }
 
 .reviews-wrapper-img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     border-radius: 100%;
+    width: 99px;
+    height: 99px;
     background-color: #2c7250;
     position: absolute;
     left: 133px;
@@ -468,6 +492,38 @@ img {
     margin-bottom: 50px;
 }
 
+
+.input-button-wrapper {
+    display: flex;
+    column-gap: 20px;
+    justify-content: center;
+    margin-bottom: 32px;
+}
+
+.form-input {
+    border: 1px solid rgba(0, 0, 0, 0.32);
+    border-radius: 5px;
+    padding: 25px 30px;
+    width: 280px;
+    height: 70px;
+    background: #fff;
+    outline: 0px solid transparent;
+    color: #bfbfbf;
+    transition: all 250ms linear;
+}
+
+.form-input:focus {
+    border: 1px solid #2c7250;
+}
+
+.form-input::placeholder {
+    font-family: "Inter", sans-serif;
+    font-weight: 400;
+    font-size: 17px;
+    line-height: 1.1;
+    color: #bfbfbf;
+}
+
 .contacts-btn {
     display: block;
     font-weight: 600;
@@ -478,26 +534,62 @@ img {
     border-radius: 5px;
     padding: 25px 41px;
     background: #2c7250;
+    min-width: 280px;
     height: 70px;
     border: transparent;
-    margin: 0 auto 32px;
+    transition: background-color 250ms linear;
 }
 
-.contacts-checkbox-text {
+.contacts-btn:hover,
+.contacts-btn:focus {
+    background-color: #006333;
+}
+
+.policy-checkbox-label {
+    display: block;
     font-weight: 400;
     font-size: 11px;
     line-height: 1.3;
     color: #7e868e;
     text-align: center;
+
 }
 
-.contacts-checkbox-text span {
-    text-decoration: underline;
-    text-decoration-skip-ink: none;
-    color: #2c7250;
+.policy-own-custom-checkbox {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid rgba(0, 0, 0, 0.32);
+    border-radius: 2px;
+    width: 12px;
+    height: 12px;
+    cursor: pointer;
+    margin-right: 5px;
 }
 
-/************** FOOTER  */
+.policy-original-checkbox:checked+.policy-checkbox-label>.policy-own-custom-checkbox {
+    background-color: #2c7250;
+}
+
+.policy-original-checkbox:checked+.policy-checkbox-label .policy-own-checkbox-icon {
+    opacity: 1;
+}
+
+.policy-original-checkbox:focus+.policy-checkbox-label>.policy-own-custom-checkbox {
+    border: 1px solid #2c7250;
+}
+
+.policy-own-checkbox-icon {
+    stroke: #fff;
+    opacity: 0;
+}
+
+.policy-original-checkbox:checked+.policy-checkbox-label .policy-own-checkbox-icon {
+    opacity: 1;
+}
+
+
+/************** FOOTER  *************/
 
 .footer-section {
     background-color: #2C7250;
@@ -534,3 +626,155 @@ img {
     text-align: right;
     color: #fff;
 }
+
+/************** FOOTER  *************/
+/************** BACKDROP  *************/
+.backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 999999;
+    background-color: rgb(0, 0, 0, 0.56);
+
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+}
+
+.backdrop.is-open {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+}
+
+/************** BACKDROP  *************/
+/************** MODAL WINDOW SYTLE  *************/
+
+.modal {
+    font-family: "Poppins", sans-serif;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    width: 650px;
+    min-height: 854px;
+    padding: 75px 50px 75px;
+}
+
+
+.modal-title {
+    display: flex;
+    align-items: center;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 1.55;
+    letter-spacing: 0.03em;
+    text-align: justify;
+    color: #000;
+    margin-bottom: 19px;
+}
+
+.modal-title::before {
+    display: block;
+    content: '';
+    border: 2px solid #d8d8d8;
+    width: 143px;
+    height: 2px;
+    margin-right: 12px;
+}
+
+.modal-subtitle {
+    font-weight: 700;
+    font-size: 48px;
+    line-height: 1.255;
+    letter-spacing: 0.03em;
+    color: #000;
+    margin-bottom: 31px;
+}
+
+.modal-text {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.55;
+    letter-spacing: 0.03em;
+    text-align: justify;
+    color: #006333;
+    margin-bottom: 23px;
+}
+
+.modal-form-label {
+    display: block;
+    margin-bottom: 23px;
+}
+
+.modal-form-input {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.55;
+    letter-spacing: 0.03em;
+    text-align: justify;
+    border: 1px solid #cacaca;
+    border-radius: 5px;
+    width: 100%;
+    height: 60px;
+    background-color: transparent;
+    outline: 0px solid transparent;
+    padding-left: 21px;
+    transition: all 250ms linear;
+}
+
+.modal-form-input:focus {
+    border: 1px solid #2c7250;
+}
+
+.modal-form-input::placeholder {
+    color: #000;
+}
+
+.form-textarea-comment {
+    width: 100%;
+    resize: none;
+    padding: 22px 21px;
+    border: 1px solid #cacaca;
+    border-radius: 5px;
+    height: 149px;
+    background-color: transparent;
+    margin-bottom: 33px;
+    outline: 0px solid transparent;
+    color: #bfbfbf;
+    transition: all 250ms linear;
+}
+
+.form-textarea-comment::placeholder {
+    color: #000;
+}
+
+.form-textarea-comment:focus {
+    border: 1px solid #2c7250;
+}
+
+.form-send-btn {
+
+    min-width: 181px;
+    height: 48px;
+    border-radius: 5px;
+    font-weight: 400;
+    font-size: 16px;
+    letter-spacing: 0.03em;
+    text-align: center;
+    color: #fff;
+    border: none;
+    outline: 0px solid transparent;
+    background-color: #2c7250;
+    transition: background-color 250ms linear;
+}
+
+.form-send-btn:hover,
+.form-send-btn:focus {
+    background-color: #006333;
+}
+
+/************** MODAL WINDOW SYTLE  *************/
