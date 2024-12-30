@@ -192,6 +192,12 @@ img {
     border: none;
     min-width: 337px;
     height: 70px;
+    transition: background-color 250ms linear;
+}
+
+.hero-btn:hover,
+.hero-btn:focus {
+    background-color: #006333;
 }
 
 /******** BENEFITS  */
