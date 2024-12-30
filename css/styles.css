@@ -411,7 +411,13 @@ img {
 }
 
 .tarrifs-list-item {
+    border-radius: 10px;
+    width: 376px;
+    height: 500px;
     width: calc((100% - 40px) / 3);
+    box-shadow: 2px 4px 15px 0 rgba(0, 0, 0, 0.05);
+    background: #fff;
+    padding: 20px 35px 35px;
 }
 
 .tarrifs-img {
